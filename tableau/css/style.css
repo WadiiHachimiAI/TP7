@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin : 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin : 0;
+
+}
+
+.entete {
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.menu { 
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.contenu {
+    background-color: brown;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.pied {
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.tableau {
+    display: grid;
+    grid-template-areas: 
+    "entete" 
+     "menu" 
+     "contenu"
+     "pied";
+}
+
+.entete {
+    grid-area: entete;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.contenu {
+    grid-area: contenu;
+}
+
+.pied {
+    grid-area: pied;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.indicateurs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+.tableau{grid-template-columns: 220px 1fr;}
+}

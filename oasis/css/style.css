@@ -1,0 +1,43 @@
+
+.page {
+    display: grid;
+    grid-template-areas:
+        "entete"
+        "contenu"
+        "pied";
+}
+
+.page header { grid-area: entete; }
+
+/* Le nom de la zone doit être le même que dans grid-template-areas. */
+.page main { grid-area: contenu; }
+
+.page footer { grid-area: pied; }
+
+.offres {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* La mise en page tablette doit être définie avant celle des grands écrans. */
+@media (min-width: 768px) {
+    .page {
+        grid-template-columns: 1fr 250px;
+        grid-template-areas:
+            "entete entete"
+            "contenu contenu"
+            "pied pied";
+    }
+
+    .offres {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* À partir de 1024px, les trois colonnes remplacent les deux colonnes précédentes. */
+@media (min-width: 1024px) {
+    .offres {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

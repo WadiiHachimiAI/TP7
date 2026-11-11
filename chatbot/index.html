@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR7 - Assistant de la bibliothèque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="images/Avatar.png" alt="Avatar de l'assistant" width="80" height="80">
+        <div>
+            <h1>CR7</h1>
+            <p class="statut">En ligne</p>
+        </div>
+    </header>
+
+    <nav class="historique">
+        <h2>Historique</h2>
+        <ul>
+            <li><a href="#">Recherche d'un livre sur Python</a></li>
+            <li><a href="#">Horaires d'ouverture</a></li>
+            <li><a href="#">Inscription à la bibliothèque</a></li>
+            <li><a href="#">Recommandation de romans</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <p>Nova est un assistant virtuel qui aide les utilisateurs à trouver des livres et des informations sur la bibliothèque.</p>
+            <h2>Ce que je peux faire</h2>
+            <ul class="capacites">
+                <li>Rechercher un livre</li>
+                <li>Donner les horaires</li>
+                <li>Recommander des livres</li>
+                <li>Répondre aux questions</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conversation</h2>
+            <div class="messages">
+                <p class="message user">Bonjour !</p>
+                <p class="message bot">Bonjour ! Comment puis-je vous aider ?</p>
+                <p class="message user">Je cherche un livre sur Python.</p>
+                <p class="message bot">Je peux vous aider à en trouver un.</p>
+                <p class="message user">Où puis-je le trouver ?</p>
+                <p class="message bot">Il se trouve dans la section informatique.</p>
+            </div>
+
+            <form class="form-message">
+                <label for="message">Votre message</label>
+                <input type="text" name="message" id="message" required placeholder="Écrivez votre message">
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+
+
+        <section>
+            <form method="post">
+                <fieldset>
+                    <legend>Votre avis</legend>
+                    <p>Choisissez une note :</p>
+                    <div class="notes">
+                        <div><input type="radio" id="avis1" name="note" value="1" required><label for="avis1">1</label></div>
+                        <div><input type="radio" id="avis2" name="note" value="2"><label for="avis2">2</label></div>
+                        <div><input type="radio" id="avis3" name="note" value="3"><label for="avis3">3</label></div>
+                        <div><input type="radio" id="avis4" name="note" value="4"><label for="avis4">4</label></div>
+                        <div><input type="radio" id="avis5" name="note" value="5"><label for="avis5">5</label></div>
+                    </div>
+                    <div>
+                        <label for="commentaire">Commentaire :</label>
+                        <textarea id="commentaire" name="commentaire" rows="3" maxlength="200" placeholder="Votre commentaire (facultatif)..."></textarea>
+                    </div>
+                    <button type="submit">Envoyer mon avis</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+    </main>
+
+    <aside>
+        <form>
+            <p>Donnez votre avis :</p>
+            <input type="radio" id="avis-simple-1" name="avis" value="1">
+            <label for="avis-simple-1">1</label>
+            <input type="radio" id="avis-simple-2" name="avis" value="2">
+            <label for="avis-simple-2">2</label>
+            <input type="radio" id="avis-simple-3" name="avis" value="3">
+            <label for="avis-simple-3">3</label>
+            <input type="radio" id="avis-simple-4" name="avis" value="4">
+            <label for="avis-simple-4">4</label>
+            <br><br>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <table>
+            <caption><strong>FAQ</strong></caption>
+            <thead>
+                <tr><th>Questions fréquentes</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Où puis-je trouver ce livre ?</td></tr>
+                <tr><td>Comment puis-je m'inscrire dans cette bibliothèque ?</td></tr>
+                <tr><td>Quel est le sujet de ce livre ?</td></tr>
+                <tr><td>Quel est le prix de l'inscription ?</td></tr>
+            </tbody>
+        </table>
+    </aside>
+
+    <footer>
+        <hr>
+        <p>Assistant disponible 24h/24</p>
+    </footer>
+</body>
+</html>
